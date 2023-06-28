@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\info;
-use App\Http\Requests\StoreinfoRequest;
-use App\Http\Requests\UpdateinfoRequest;
+use App\Models\testinfo;
+use App\Http\Requests\StoretestinfoRequest;
+use App\Http\Requests\UpdatetestinfoRequest;
 
-class InfoController extends Controller
+class TestinfoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,13 +21,13 @@ class InfoController extends Controller
      */
     public function create()
     {
-        return view('home');
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreinfoRequest $request)
+    public function store(StoretestinfoRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class InfoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(info $info)
+    public function show(testinfo $testinfo)
     {
         //
     }
@@ -43,7 +43,7 @@ class InfoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(info $info)
+    public function edit(testinfo $testinfo)
     {
         //
     }
@@ -51,7 +51,7 @@ class InfoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateinfoRequest $request, info $info)
+    public function update(UpdatetestinfoRequest $request, testinfo $testinfo)
     {
         //
     }
@@ -59,7 +59,7 @@ class InfoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(info $info)
+    public function destroy(testinfo $testinfo)
     {
         //
     }

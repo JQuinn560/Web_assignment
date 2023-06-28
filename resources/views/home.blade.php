@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<x-app-layout>
 <html>
 <head>
   <title>User Information</title>
@@ -6,16 +6,22 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+
     }
 
     h1 {
       text-align: center;
+      color: white
     }
 
     .container {
       max-width: 400px;
       margin: 0 auto;
+      
+    }
+
+    .container label {
+      color: white; /* Set the label color to white */
     }
 
     .form-group {
@@ -48,7 +54,7 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container ">
     <h1>User Information</h1>
     <form>
       <div class="form-group">
@@ -89,4 +95,4 @@
     </form>
   </div>
 </body>
-</html>
+</x-app-layout>

@@ -13,6 +13,18 @@ return new class extends Migration
     {
         Schema::create('infos', function (Blueprint $table) {
             $table->id();
+            $table->string('Name');
+            $table->string('Email');
+            $table->integer('PhoneNumber');
+            $table->string('EndDate');
+            $table->integer('NumberMin5');
+            $table->integer('NumberMax8');
+            $table->integer('WholeNumber');
+            $table->integer('MaxWhole');
+            $table->integer('NumRange');
+            $table->string('Insta');
+            $table->string('picture')->nullable();
+            $table->foreignId('user_id')->constrained;
             $table->timestamps();
         });
     }
