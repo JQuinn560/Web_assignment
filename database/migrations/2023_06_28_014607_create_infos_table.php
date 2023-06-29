@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('Name');
             $table->string('Email');
             $table->integer('PhoneNumber');
+            $table->string('StartDate');
             $table->string('EndDate');
             $table->integer('NumberMin5');
             $table->integer('NumberMax8');

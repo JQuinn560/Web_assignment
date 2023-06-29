@@ -29,7 +29,23 @@ class InfoController extends Controller
      */
     public function store(StoreinfoRequest $request)
     {
-        //
+        $info = Info::create([
+            'name' => $request->Name,
+            'email' => $request->Email,
+            'number' => $request->PhoneNumber,
+            'start-date' => $request->StartDate,
+            'end-date' => $request->EndDate,
+            'min-number' => $request->NumberMin5,
+            'max-number' => $request->NumberMax8,
+            'whole-number' => $request->WholeNumber,
+            'max-whole-number' => $request->MaxWhole,
+            'number-range' => $request->NumRange,
+            'instagram-url' => $request->Insta,
+            'picture' => $request->picture,
+
+        ]);
+
+        return response($info);
     }
 
     /**
