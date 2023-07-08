@@ -23,13 +23,8 @@ class StoreinfoRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'phone' => ['required', 'integer', 'min:11', 'max:11'],
-            'min-number' => ['required', 'integer', 'min:10000'],
-            'max-number' => ['required', 'integer', 'max:99999999'],
-            'whole-number' => ['required', 'integer', 'min:1'],
-            'max-whole-number' => ['required', 'integer', 'min:100'],
-            'number-range' => ['required', 'integer', 'min:20', 'max:40'],         
-         'picture' => ['requried', 'mimes: jpg,bmp,png,jpeg']
+ 
+            
             
         ];
     }

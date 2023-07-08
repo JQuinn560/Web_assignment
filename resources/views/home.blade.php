@@ -61,9 +61,11 @@
   </style>
 </head>
 <body>
+<form method= "POST" action = "{{ route('info.store')}}" enctype="multipart/form-data">
+  @csrf
   <div class="container">
     <h1>User Information</h1>
-    <form>
+    
       <div class="form-row">
         <div class="form-group">
           <label for="name">Name:</label>
@@ -76,8 +78,8 @@
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label for="start-date">Start Date:</label>
-          <input type="date" id="start-date" name="start-date" required>
+          <label for="start">Start Date:</label>
+          <input type="date" id="start" name="start" required>
         </div>
         <div class="form-group">
           <label for="phone">Phone Number:</label>
@@ -86,38 +88,38 @@
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label for="end-date">End Date:</label>
-          <input type="date" id="end-date" name="end-date" required>
+          <label for="enddate">End Date:</label>
+          <input type="date" id="enddate" name="enddate" required>
         </div>
         <div class="form-group">
-          <label for="min-number">Number (minimum 5 digits):</label>
-          <input type="number" id="min-number" name="min-number" min="10000" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="max-number">Number (maximum 8 digits):</label>
-          <input type="number" id="max-number" name="max-number" max="99999999" required>
-        </div>
-        <div class="form-group">
-          <label for="whole-number">Whole Number (greater than 0):</label>
-          <input type="number" id="whole-number" name="whole-number" min="1" step="1" required>
+          <label for="minnumber">Number (minimum 5 digits):</label>
+          <input type="number" id="minnumber" name="minnumber" min="10000" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label for="max-whole-number">Max Whole Number (maximum value 100):</label>
-          <input type="number" id="max-whole-number" name="max-whole-number" max="100" required>
+          <label for="maxnumber">Number (maximum 8 digits):</label>
+          <input type="number" id="maxnumber" name="maxnumber" max="99999999" required>
         </div>
         <div class="form-group">
-          <label for="instagram-url">Instagram URL:</label>
-          <input type="url" id="instagram-url" name="instagram-url" placeholder="Enter your Instagram URL" required>
+          <label for="wholenumber">Whole Number (greater than 0):</label>
+          <input type="number" id="wholenumber" name="wholenumber" min="1" step="1" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="maxwholenumber">Max Whole Number (maximum value 100):</label>
+          <input type="number" id="maxwholenumber" name="maxwholenumber" max="100" required>
+        </div>
+        <div class="form-group">
+          <label for="instagramurl">Instagram URL:</label>
+          <input type="url" id="instagramurl" name="instagramurl" placeholder="Enter your Instagram URL" required>
         </div>
       </div>
       <div class="form-row">
       <div class="form-group">
         <label for="number-range">Number in Range (20 to 40):</label>
-        <input type="number" id="number-range" name="number-range" min="20" max="40" required>
+        <input type="number" id="numberrange" name="numberrange" min="20" max="40" required>
       </div>
         <div class="form-group">
           <label for="picture">Upload Picture:</label>
