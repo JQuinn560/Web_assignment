@@ -38,8 +38,8 @@
 <body>
 
 @foreach($infos as $info )
-<div class="center-div">
-  <a href="{{route('info.show',$info->id)}}">{{$info->Name }}</p>
+<div class="center-div flex justify-between">
+  <a href="{{route('info.show',$info->id)}}">{{$info->Name }}</a>
   <p>{{$info->created_at->diffforHumans() }}</p>
 
   </div>

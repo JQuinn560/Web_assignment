@@ -55,7 +55,7 @@ class InfoController extends Controller
      */
     public function show(info $info)
     {
-        //
+        return view('show',  compact('info'));
     }
 
     /**
@@ -63,7 +63,7 @@ class InfoController extends Controller
      */
     public function edit(info $info)
     {
-        //
+        return view('edit', compact('info'));
     }
 
     /**
@@ -71,7 +71,8 @@ class InfoController extends Controller
      */
     public function update(UpdateinfoRequest $request, info $info)
     {
-        //
+        $info->update($request->validated());
+        return redirect(route('info.index'));
     }
 
     /**
