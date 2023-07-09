@@ -13,7 +13,8 @@ class InfoController extends Controller
      */
     public function index()
     {
-        //
+        $infos = Info::all();
+        return view('index', compact('infos'));
     }
 
     /**
@@ -46,7 +47,7 @@ class InfoController extends Controller
 
         ]);
 
-        return response($info);
+        return view('home');
     }
 
     /**
