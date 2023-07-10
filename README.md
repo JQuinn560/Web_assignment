@@ -1,4 +1,4 @@
-# laravel 10 web resit
+# laravel 10
 
 ## jamie quinn
 
