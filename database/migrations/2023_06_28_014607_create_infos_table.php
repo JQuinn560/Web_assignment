@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('Name');
             $table->string('Email');
-            $table->VARCHAR('PhoneNumber');
+            $table->string('PhoneNumber');
             $table->date('StartDate');
             $table->date('EndDate');
             $table->integer('NumberMin5');

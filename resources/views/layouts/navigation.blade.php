@@ -22,6 +22,13 @@
                         {{ __('View Info') }}
                     </x-nav-link>
                 </div>
+                @if(Auth::user()->userType == 'admin')
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('user.list')" :active="request()->routeIs('user.list')">
+                        {{ __('User List') }}
+                    </x-nav-link>
+                </div>
+                @endif
             </div>
 
             <!-- Settings Dropdown -->

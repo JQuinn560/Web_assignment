@@ -23,6 +23,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'userType'
     ];
 
     /**
@@ -51,7 +52,7 @@ class User extends Authenticatable
 
         $admins = ['admin@images-app.com'];
         return Attr::make(
-        get: fn() => in_array($this->email, $admins) 
+        get: fn() => in_array($this->email, $admins)
         );
     }
 }

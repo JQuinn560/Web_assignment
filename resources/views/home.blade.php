@@ -10,11 +10,11 @@
 
     h1 {
       text-align: center;
-      color: white;
+      color: rgb(17 24 39 / var(--tw-text-opacity));
       font-size: 40px;
     }
     .container label{
-      color: white;
+      color: rgb(17 24 39 / var(--tw-text-opacity));
     }
 
     .container {
@@ -65,7 +65,7 @@
   @csrf
   <div class="container">
     <h1>User Information</h1>
-    
+
       <div class="form-row">
         <div class="form-group">
           <label for="name">Name:</label>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\info;
 use App\Http\Requests\StoreinfoRequest;
 use App\Http\Requests\UpdateinfoRequest;
-
+use Illuminate\Support\Facades\Auth;
 class InfoController extends Controller
 {
     /**
@@ -13,8 +13,9 @@ class InfoController extends Controller
      */
     public function index()
     {
-        $infos = Info::all();
-        return view('index', compact('infos'));
+        $info = Info::where('user_id',auth()->id())->first();
+        // dd($infos);
+        return view('index', compact('info'));
     }
 
     /**
@@ -30,22 +31,27 @@ class InfoController extends Controller
      */
     public function store(StoreinfoRequest $request)
     {
-        $info = Info::create([
-            'Name' => $request->name,
-            'Email' => $request->email,
-            'PhoneNumber' => $request->phone,
-            'StartDate' => $request->start,
-            'EndDate' => $request->enddate,
-            'NumberMin5' => $request->minnumber,
-            'NumberMax8' => $request->maxnumber,
-            'WholeNumber' => $request->wholenumber,
-            'MaxWhole' => $request->maxwholenumber,
-            'NumRange' => $request->numberrange,
-            'Insta' => $request->instagramurl,
-            'picture'=> $request->picture,
-            'user_id' => auth()->id(),
+        if ($request->hasFile('picture')) {
+            $imagePath = $request->file('picture')->store('images', 'public');
+        } else {
+            $imagePath = null;
+        }
 
-        ]);
+         $info = Info::create([
+        'Name' => $request->name,
+        'Email' => $request->email,
+        'PhoneNumber' => $request->phone,
+        'StartDate' => $request->start,
+        'EndDate' => $request->enddate,
+        'NumberMin5' => $request->minnumber,
+        'NumberMax8' => $request->maxnumber,
+        'WholeNumber' => $request->wholenumber,
+        'MaxWhole' => $request->maxwholenumber,
+        'NumRange' => $request->numberrange,
+        'Insta' => $request->instagramurl,
+        'picture' => $imagePath,
+        'user_id' => auth()->id(),
+    ]);
 
         return view('home');
     }
