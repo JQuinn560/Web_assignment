@@ -90,10 +90,8 @@
 <body>
 
 
-
+@if(!empty($info))
     <div class="profile-container">
-
-
         <img class="profile-photo" src="{{asset('storage/'.$info->picture)}}" alt="Profile Photo">
         <h1 class="profile-name">{{$info->Name}}</h1>
         <p class="profile-details">Email Address: {{$info->Email}}</p>
@@ -110,7 +108,11 @@
             <span>See Details</span>
           </a>
       </div>
-
+@else
+<div class="profile-container" style="background-color: red;color:white;padding:20px 30px;margin-top:50px">
+    No information found
+</div>
+@endif
 
 
 
