@@ -33,11 +33,17 @@
   }
 }
         .table {
+          
           width: 100%;
           margin-bottom: 1rem;
-          color: #212529;
+          color: white;
           border-collapse: collapse;
         }
+
+        tr:hover {
+      background-color: red;
+    }
+
 
         .table th,
         .table td {

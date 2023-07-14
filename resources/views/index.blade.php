@@ -3,37 +3,11 @@
 <head>
   <title>User Information</title>
   <style>
-    /* body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      color: black;
-    }
-
-    h1 {
-      text-align: center;
-      color: black;
-      font-size: 40px;
-    }
-    .container label{
-      color: black;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .center-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
-*/
 .profile-container {
       width: 300px;
       margin: 0 auto;
       text-align: center;
+      color: white;
     }
 
     .profile-photo {
