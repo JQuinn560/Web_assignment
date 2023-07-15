@@ -31,6 +31,8 @@ class InfoController extends Controller
      */
     public function store(StoreinfoRequest $request)
     {
+        $validatedData = $request->validated();
+
         if ($request->hasFile('picture')) {
             $imagePath = $request->file('picture')->store('images', 'public');
         } else {
@@ -77,7 +79,9 @@ class InfoController extends Controller
      */
     public function update(UpdateinfoRequest $request, info $info)
     {
-        $info->update($request->validated());
+        $validatedData = $request->validated();
+
+        $info->update($validatedData);
         return redirect(route('info.index'));
     }
 
